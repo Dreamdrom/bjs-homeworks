@@ -9,7 +9,7 @@ averageValue = (algebra + geography + physics)/3;
 console.log("Средняя оценка " + averageValue);
 
 let name = 'Roman';
-let message = 'Привет, мир! Меня зовут ${name}';
+let message = `Привет, мир! Меня зовут ${name}`;
 console.log(message);
 
 let x = 2;
