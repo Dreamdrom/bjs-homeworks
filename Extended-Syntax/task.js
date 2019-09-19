@@ -13,6 +13,26 @@ function calculateQuadraticEquation(){
 function getResult(a,b,c){
     // код для задачи №1 писать здесь
     //return x;
+    "use strict";
+    let discriminant;
+    let x = [];
+    // let result = [];
+discriminant = (b** - 4*a*c);
+if (discriminant < 0) {
+    x[0] = 'Корней у уравнения нет '
+}
+if (discriminant == 0) {
+    x[0] = (-b/2*a)
+}
+if (discriminant > 0) {
+    x[0] = (-b + Math.sqrt(discriminant)/2*a);
+    x[1] = (-b - Math.sqrt(discriminant)/2*a);
+}
+// getResult;
+// Следующие три строки для контроля-проверки
+console.log (`Корни уравнения ${x}`)
+console.log (`Дискриминант ${discriminant}`)
+console.log (`result ${result}`)
 }
 
 function calculateAverageRating(){
@@ -24,6 +44,29 @@ function calculateAverageRating(){
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
     //return averageMark;
+     {
+
+    }
+    if (marks.length > 5) {
+    console.log ('Количество оценок больше пяти');
+    marks.length = 5;
+
+    averageMark = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) / 5;
+
+    }
+
+    if (marks.length <= 5) {
+    
+        let sum = 0; 
+        for(let i = 0; i < marks.length; i++){
+            sum = sum + marks[i];
+        }
+    averageMark = sum / marks.length
+
+    }
+console.log ('Average' + averageMark);
+console.log (`marks ${marks}`)
+console.log(marks.length)
 }
 
 function calculateDrinkTask(){
