@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 function calculateQuadraticEquation(){
     let a = +window.a.value;
@@ -18,14 +18,13 @@ function getResult(a,b,c){
     let result = [];
 discriminant = ((b**2) - (4*a*c));
 if (discriminant < 0) {
-    result = []
 }
 if (discriminant == 0) {
     result[0] = (-b/(2*a))
 }
 if (discriminant > 0) {
-    result[0] = (-b + (Math.sqrt(discriminant)/(2*a)));
-    result[1] = (-b - (Math.sqrt(discriminant)/(2*a)));
+    result[0] = (-b + (Math.sqrt(discriminant)))/(2*a);
+    result[1] = (-b - (Math.sqrt(discriminant)))/(2*a);
 }
 // getResult;
 // Следующие три строки для контроля-проверки
@@ -43,6 +42,7 @@ function calculateAverageRating(){
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
     //return averageMark;  
+    let averageMark
     if (marks.length > 5) {
     console.log ('Количество оценок больше пяти');
     marks.splice (5)
@@ -70,10 +70,9 @@ function calculateDrinkTask(){
 function askDrink(name,dateOfBirthday){
     // код для задачи №3 писать здесь
     //return drink;
+let drink
 let age = (new Date().getFullYear() - dateOfBirthday.getFullYear());
-// let ageyear = age.getFullYear();
 console.log (age);
-// console.log (ageyear);
 if (age >= 18 ) {
     drink = `Не желаете ли олд-фэшн, ${name}?`
 }else{
