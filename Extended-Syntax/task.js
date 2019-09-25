@@ -15,23 +15,23 @@ function getResult(a,b,c){
     //return x;
  
     let discriminant;
-    let x = [];
+    let result = [];
 discriminant = ((b**2) - (4*a*c));
 if (discriminant < 0) {
-    x = []
+    result = []
 }
 if (discriminant == 0) {
-    x[0] = (-b/(2*a))
+    result[0] = (-b/(2*a))
 }
 if (discriminant > 0) {
-    x[0] = (-b + (Math.sqrt(discriminant)/(2*a)));
-    x[1] = (-b - (Math.sqrt(discriminant)/(2*a)));
+    result[0] = (-b + (Math.sqrt(discriminant)/(2*a)));
+    result[1] = (-b - (Math.sqrt(discriminant)/(2*a)));
 }
 // getResult;
 // Следующие три строки для контроля-проверки
-console.log (`Корни уравнения ${x}`)
+console.log (`Корни уравнения ${result}`)
 console.log (`Дискриминант ${discriminant}`)
-return x;
+return result;
 }
 
 function calculateAverageRating(){
