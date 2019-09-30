@@ -84,7 +84,7 @@ getAverageScore( data );
 
 
 
-// Пример из лекции
+// Пример из лекции на обход всех значений
 // let ivan = {
 //     firstName: 'Иван',
 //     lastName: 'Зайцев'} 
@@ -92,3 +92,33 @@ getAverageScore( data );
 //     let value = ivan[ prop ];
 //     console.log( `Свойство ${prop}, значение: ${value}` );
 //     }
+
+function getPersonData() {
+let secretData = {
+    aaa: 1,
+    bbb: 0,
+    }
+    
+    function pirate() {
+
+        if (aaa == 0) {
+        firstName = "Родриго";  
+        } else {
+        firstName = "Эмильо";   
+        return firstName;
+        }
+
+        if (bbb == 0) {
+        lastName = "Родриго";  
+        } else {
+        lastName = "Эмильо";   
+        return lastName;
+        }
+        pirate();
+      }
+
+
+getPersonData (secretData);
+console.log (`firstName:  ${firstName}, lastName: ${lastName}`);
+}
+
