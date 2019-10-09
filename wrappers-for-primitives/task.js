@@ -1,3 +1,4 @@
+"use strict";   
 function calculateMortgage() {
     let percent = window.percent.value;
     let contribution = window.contribution.value;
@@ -11,9 +12,20 @@ function calculateMortgage() {
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
 
+
+    let srok =  date - new Date() -
+
+
+    Платеж=S*(P+P/(((1+P)^n)-1)), где: S - сумма кредита, P - 1/12 процентной ставки (от 0 до 1),
+     n - количество месяцев ^ - возведение в степень
+
     // код для задачи №1 писать здесь
     //return totalAmount;
 }
+
+
+
+
 
 function sayHello() {
     let name = window.personName.value;

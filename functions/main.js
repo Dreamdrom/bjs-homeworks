@@ -19,14 +19,13 @@ if (d > 0) {
         roots: [x1, x2], 
         D: d}
     }
+}
 
 function showSolutionMessage (a,b,c){
-     a = 2;
-     b = 3;
-     c = 5;
-    result = getSolutions(a,b,c)
+   let result = getSolutions(2,3,5   );
 console.log (`Вычисляем корни квадратного уравнения ${a}x² + ${b}x + ${c}`);
-console.log (`Значение дискриминанта ${D}`)
+console.log (`Значение result ${result}`);
+console.log (`Значение дискриминанта ${D}`);
 if (D < 0) {
     console.log (`Уравнение не имеет вещественных корней`)
  }
@@ -37,7 +36,8 @@ if (D < 0) {
     console.log (`Уравнение имеет два корня. ${X1} = значение_корня_1, ${X2} = значение_корня_2`)
 }
 }
-}
+// getSolutions(2,3,5);
+showSolutionMessage (2,3,5);
 
 
 let data = {    
@@ -105,20 +105,26 @@ let secretData = {
         firstName = "Родриго";  
         } else {
         firstName = "Эмильо";   
-        return firstName;
+        // return firstName;
         }
 
         if (bbb == 0) {
         lastName = "Родриго";  
         } else {
         lastName = "Эмильо";   
-        return lastName;
+        // return lastName;
         }
+        return {
+            firstName,
+            lastName
+        };
+
         pirate();
       }
 
 
-getPersonData (secretData);
+console.log (getPersonData (secretData));
 console.log (`firstName:  ${firstName}, lastName: ${lastName}`);
 }
+
 
