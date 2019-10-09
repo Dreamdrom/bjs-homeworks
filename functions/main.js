@@ -12,8 +12,8 @@ if (d == 0) {
         D: d}
     }
 if (d > 0) {
-        let x1 = (-b + (Math.sqrt(discriminant)))/(2*a);
-        let x2 = (-b - (Math.sqrt(discriminant)))/(2*a);
+        let x1 = (-b + (Math.sqrt(d)))/(2*a);
+        let x2 = (-b - (Math.sqrt(d)))/(2*a);
 
     return {
         roots: [x1, x2], 
@@ -22,22 +22,21 @@ if (d > 0) {
 }
 
 function showSolutionMessage (a,b,c){
-   let result = getSolutions(2,3,5   );
+   let result = getSolutions(a,b,c);
 console.log (`Вычисляем корни квадратного уравнения ${a}x² + ${b}x + ${c}`);
-console.log (`Значение result ${result}`);
-console.log (`Значение дискриминанта ${D}`);
-if (D < 0) {
+console.log (`Значение дискриминанта ${result.D}`);
+if (result.D < 0) {
     console.log (`Уравнение не имеет вещественных корней`)
  }
- if (D == 0) {
+ if (result.D == 0) {
     console.log (`Уравнение имеет один корень ${x1} = значение_корня`)
  }
- if (D > 0) {
+ if (result.D > 0) {
     console.log (`Уравнение имеет два корня. ${X1} = значение_корня_1, ${X2} = значение_корня_2`)
 }
 }
 // getSolutions(2,3,5);
-showSolutionMessage (2,3,5);
+showSolutionMessage (7,20,-3);
 
 
 let data = {    
