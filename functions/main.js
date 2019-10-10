@@ -14,11 +14,13 @@ if (d == 0) {
 if (d > 0) {
         let x1 = (-b + (Math.sqrt(d)))/(2*a);
         let x2 = (-b - (Math.sqrt(d)))/(2*a);
+        console.log (x1, x2);
 
     return {
         roots: [x1, x2], 
-        D: d}
+        D: d};
     }
+        
 }
 
 function showSolutionMessage (a,b,c){
@@ -32,7 +34,7 @@ if (result.D < 0) {
     console.log (`Уравнение имеет один корень ${result.x1} = значение_корня`)
  }
  if (result.D > 0) {
-    console.log (`Уравнение имеет два корня. ${result.x1} = значение_корня_1, ${result.x2} = значение_корня_2`)
+    console.log (`Уравнение имеет два корня. ${result.roots[0]} = значение_корня_1, ${result.roots[1]} = значение_корня_2`)
 }
 }
 // getSolutions(2,3,5);
@@ -115,13 +117,13 @@ let secretData = {
         }
         return {
             firstName,
-            lastName
+            lastName,
         };
 
-        pirate();
+      
       }
 
-
+      pirate();
 console.log (getPersonData (secretData));
 console.log (`firstName:  ${firstName}, lastName: ${lastName}`);
 }
